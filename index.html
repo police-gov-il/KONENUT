@@ -842,6 +842,58 @@
                         </div>
                     </div>
                     <!--- PR 4 --->
+                    
+         <style>
+    .background-image {
+        position: relative;
+        text-align: center;
+        color: yellow;
+    }
+
+    .background-image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('BGP.jpg') no-repeat center center;
+        background-size: cover;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+    }
+</style>
+
+<div class="background-image">
+    <div class="content">
+        <h2 style="direction: rtl;">אנא צפו בסרטון:</h2>
+        <video class="grow" style="width: 90%; max-width: 100%;" autoplay controls preload="auto">
+            <source src="vid1_modiin_cc.mp4" type="video/mp4" />
+            <source src="vid1_modiin_cc.ogv" type="video/ogv" />
+            <source src="vid1_modiin_cc.webm" type="video/webm" />
+        </video>
+        <h4>אימון כיתת הכוננות של מודיעין</h4>
+    </div>
+</div>
+
+        
+                
+                        
+                                           
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     <div class="sticky-works-wrapper" dir="rtl">
                         <div class="overflow">
                             <div data-w-id="061de177-c4d0-de63-5f41-e953d2e7efba" class="collection-list-projects project w-dyn-list">
