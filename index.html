@@ -798,7 +798,11 @@
     .background-image {
         position: relative;
         text-align: center;
-        color: yellow;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Adjust the height as needed */
     }
 
     .background-image::before {
@@ -817,8 +821,11 @@
     .content {
         position: relative;
         z-index: 1;
+        width: 90%; /* Width of the video */
+        max-width: 100%; /* Ensure it doesn't exceed screen width */
     }
 </style>
+
 
 
             <section class="section">
