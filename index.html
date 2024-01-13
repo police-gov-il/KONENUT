@@ -794,6 +794,32 @@
                 </center>
             </header>
 
+<style>
+    .background-image {
+        position: relative;
+        text-align: center;
+        color: yellow;
+    }
+
+    .background-image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('BGP.jpg') no-repeat center center;
+        background-size: cover;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+    }
+</style>
+
 
             <section class="section">
                 <div class="page-padding">
@@ -843,31 +869,7 @@
                     </div>
                     <!--- PR 4 --->
                     
-         <style>
-    .background-image {
-        position: relative;
-        text-align: center;
-        color: yellow;
-    }
 
-    .background-image::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('BGP.jpg') no-repeat center center;
-        background-size: cover;
-        opacity: 0.5;
-        z-index: -1;
-    }
-
-    .content {
-        position: relative;
-        z-index: 1;
-    }
-</style>
 
 <div class="background-image">
     <div class="content">
@@ -882,17 +884,6 @@
 </div>
 
 
-<div class="background-image">
-    <div class="content">
-        <h2 style="direction: rtl;">אנא צפו בסרטון:</h2>
-        <video class="grow" style="width: 90%; max-width: 50%;" autoplay controls preload="auto">
-            <source src="vid2_yavne_yahalom.mp4" type="video/mp4" />
-            <source src="vid2_yavne_yahalom.ogv" type="video/ogv" />
-            <source src="vid2_yavne_yahalom.webm" type="video/webm" />
-        </video>
-        <h4>אימון יהלום של יבנה</h4>
-    </div>
-</div>
         
                 
                         
@@ -912,17 +903,18 @@
                                 <div role="list" class="w-dyn-items">
                                     <div role="listitem" class="project-item-wrapper w-dyn-item">
                                         <a style="background-image:url(&quot;BGP.jpg&quot;)" href="#" class="link-project-wrapper w-inline-block">
-                                            <div class="inner-container">
-                                                <center>
-                                                    <b><u><H2 style="color:yellow" dir="rtl"  >אנא צפו בסרטון:</h2></u></b>
-                                                    <video class="grow" width="400px" autoplay="autoplay" controls preload="auto" >
-                                                        <source class=”grow” width="60%" src="vid2_yavne_yahalom.mp4" type="video/mp4" />
-                                                        <source class=”grow” src="vid2_yavne_yahalom.ogv" type="video/ogv" />
-                                                        <source class=”grow” src="vid2_yavne_yahalom.webm" type="video/webm" />
-                                                    </video><br/>
-                                                    <h4 style="color:yellow">  אימון יהלום של יבנה </h4>
-                                                </center>
-                                            </div>
+                                            <div class="background-image">
+    <div class="content">
+        <h2 style="direction: rtl;">אנא צפו בסרטון:</h2>
+        <video class="grow" style="width: 90%; max-width: 50%;" autoplay controls preload="auto">
+            <source src="vid2_yavne_yahalom.mp4" type="video/mp4" />
+            <source src="vid2_yavne_yahalom.ogv" type="video/ogv" />
+            <source src="vid2_yavne_yahalom.webm" type="video/webm" />
+        </video>
+        <h4>אימון יהלום של יבנה</h4>
+    </div>
+</div>
+
                                         </a>
                                     </div>
                                 </div>
