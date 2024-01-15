@@ -4812,17 +4812,17 @@ body {
   font-weight: 300;
 }
 
-.slider {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
+.image-zoom-container {
+  display: block;
+  width: 50%; /* Initial width */
+  background-size: cover;
+  transition: width 0.5s ease; /* Smooth transition for zoom effect */
 }
 
-.slide {
-  min-width: 100%;
-  transition: transform 0.5s ease;
+/* Zoom effect on hover */
+.image-zoom-container:hover {
+  width: 90%;
 }
-
 
 
 .grow {
