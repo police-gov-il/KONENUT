@@ -1,17 +1,31 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let counter = 1;
+const size = document.querySelector('.carousel-slide img').clientWidth;
+const carouselSlide = document.querySelector('.carousel-slide');
+const totalSlides = document.querySelectorAll('.carousel-slide img').length;
 
-function moveSlide(n) {
-    showSlides(slideIndex += n);
-}
+document.getElementById('nextBtn').addEventListener('click', () => {
+    if (counter >= totalSlides - 1) return;
+    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    counter++;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
+document.getElementById('prevBtn').addEventListener('click', () => {
+    if (counter <= 0) return;
+    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+counter--;
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+// Reset position at the end of the transition
+carouselSlide.addEventListener('transitionend', () => {
+if (counter === 0) {
+carouselSlide.style.transition = "none";
+counter = totalSlides - 2;
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+} else if (counter === totalSlides - 1) {
+carouselSlide.style.transition = "none";
+counter = 1;
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 }
+});

@@ -4812,63 +4812,15 @@ body {
   font-weight: 300;
 }
 
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
+.image-zoom-container {
+  background-size: 50%;
+  transition: background-size 0.3s ease;
 }
 
-.slide {
-  display: none;
-  width: 100%;
-  height: 500px; /* Adjust height as needed */
-  background-size: cover;
-  background-position: center;
+.image-zoom-container:hover {
+  background-size: 90%;
 }
 
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  z-index: 1000;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-@media screen and (max-width: 768px) {
-  .prev, .next {
-      font-size
-: 12px;
-padding: 10px;
-}
-}
 
 /* Ensure the slides fit the width of the container */
 .slideshow-container .slide {
