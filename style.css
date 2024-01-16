@@ -4813,13 +4813,22 @@ body {
 }
 
 .grow { 
-  transition: all .2s ease-in-out; 
+  transition: all .8s ease-in-out; 
   }
   
   .grow:hover { 
   transform: scale(0.9); 
   }
 
+  .grow2 { 
+    transition: all 2s ease-in-out; 
+    }
+    
+    .grow2:hover { 
+    transform: scale(2); 
+    }
+
+    
 h1 {
   margin-top: 0px;
   margin-bottom: 10px;
